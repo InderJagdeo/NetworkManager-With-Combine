@@ -33,6 +33,7 @@
 		FA082EB3292DD4A2008BBC95 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA082EA4292DD4A2008BBC95 /* NetworkMonitor.swift */; };
 		FA082EB8292DD51D008BBC95 /* CountryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA082EB5292DD51D008BBC95 /* CountryRequest.swift */; };
 		FA082EB9292DD51D008BBC95 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA082EB7292DD51D008BBC95 /* Country.swift */; };
+		FA082EBF292E37CF008BBC95 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA082EBE292E37CF008BBC95 /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		FA082EA4292DD4A2008BBC95 /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		FA082EB5292DD51D008BBC95 /* CountryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryRequest.swift; sourceTree = "<group>"; };
 		FA082EB7292DD51D008BBC95 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		FA082EBE292E37CF008BBC95 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 				FA082E9E292DD4A2008BBC95 /* HTTPMethod.swift */,
 				FA082E9F292DD4A2008BBC95 /* NetworkLogger.swift */,
 				FA082EA0292DD4A2008BBC95 /* NetworkConstant.swift */,
+				FA082EBE292E37CF008BBC95 /* EndPoint.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				FA082EB3292DD4A2008BBC95 /* NetworkMonitor.swift in Sources */,
 				FA082EA9292DD4A2008BBC95 /* NetworkRequest.swift in Sources */,
 				FA082EA6292DD4A2008BBC95 /* NSMutableData+Append.swift in Sources */,
+				FA082EBF292E37CF008BBC95 /* EndPoint.swift in Sources */,
 				FA082EAA292DD4A2008BBC95 /* ErrorParser.swift in Sources */,
 				FA082EB2292DD4A2008BBC95 /* CustomStringConvertible+Codable.swift in Sources */,
 				FA082E5B292DD3FA008BBC95 /* AppDelegate.swift in Sources */,

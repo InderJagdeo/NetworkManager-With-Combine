@@ -11,12 +11,4 @@ var kTimeoutInterval: TimeInterval = 30.0
 var kNetworkEnvironment: Environment = .development
 var kRequestCachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalCacheData
 
-enum ApiVersion: String {
-    case v3 = "v3.1"
-}
-
-enum ApiEndPoint: String {
-    case all = "all"
-}
-
 

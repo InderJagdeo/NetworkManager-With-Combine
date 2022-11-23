@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 struct CountryRequest: Router {
-    var path: String = "/\(ApiVersion.v3.rawValue)/" + ApiEndPoint.all.rawValue
+    var path: String = "/\(ApiVersion.v3.rawValue)/" + EndPoint.all.rawValue
     var method: HTTPMethod = .get
     var requestType: RequestType = .data
     var parameters: RequestParameters?
