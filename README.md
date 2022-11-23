@@ -15,18 +15,18 @@ Create NetworkRequest.swift class instance in your ViewControler.swift class.
 
 Create your URL request and call request method with your URL request.
 ```bash
-  let request = CountryRequest()
-        networkRequest.dataRequest(request)
-            .sink { (completion) in
-                switch completion {
-                case .failure(let error):
-                    print("Error: \(error.localizedDescription)")
-                case .finished:
-                    print("Do your stuff here.")
-                }
-            } receiveValue: { (countries) in
-                print("Number of countries - \(countries.count) countries")
-            }
-            .store(in: &subscriptions)
+   let request = CountryRequest()
+   networkRequest.dataRequest(request)
+      .sink { (completion) in
+          switch completion {
+              case .failure(let error):
+                  print("Error: \(error.localizedDescription)")
+              case .finished:
+                  print("Do your stuff here.")
+              }
+        } receiveValue: { (countries) in
+           print("Number of countries - \(countries.count) countries")
+        }
+        .store(in: &subscriptions)
 ```
 
