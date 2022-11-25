@@ -42,10 +42,12 @@ public final class NetworkManager: NetworkManagerProtocol {
                 return promise(.failure(RequestError.invalidURL()))
             }
 
+            NetworkLogger.log(request: request)
             return self.session.dataTaskPublisher(for: request)
                 .tryMap { (data, response) -> Data in
-                    if let response = response as? HTTPURLResponse, !(200...299).contains(response.statusCode) {
-                        throw route.errorParser.parse(.mapNetworkError(response.statusCode))
+                    NetworkLogger.log(response: response)
+                    if let response = response as? HTTPURLResponse, !response.statusCode.isSuccess {
+                        throw route.errorParser.parse(.mapRequestError(response.statusCode))
                     }
                     return data
                 }
@@ -53,7 +55,8 @@ public final class NetworkManager: NetworkManagerProtocol {
                 .receive(on: RunLoop.main)
                 .sink(receiveCompletion: { (completion) in
                     if case let .failure(error) = completion {
-                        promise(.failure(route.errorParser.parse(.handleNetworkError(error))))
+                        NetworkLogger.log(error: error)
+                        promise(.failure(route.errorParser.parse(.handleRequestError(error))))
                     }
                 }, receiveValue: { promise(.success($0)) })
                 .store(in: &self.cancellables)

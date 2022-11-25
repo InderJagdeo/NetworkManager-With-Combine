@@ -10,7 +10,7 @@ import Foundation
 class NetworkLogger {
     static func log(request: URLRequest) {
 
-        print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
+        print("\n - - - - - - - - - - REQUEST - - - - - - - - - - \n")
         defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
 
         let urlAsString = request.url?.absoluteString ?? ""
@@ -37,7 +37,7 @@ class NetworkLogger {
     }
 
     static func log(response: URLResponse?) {
-        print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
+        print("\n - - - - - - - - - - RESPONSE - - - - - - - - - - \n")
         defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
 
         if let response = response {
@@ -48,7 +48,7 @@ class NetworkLogger {
     }
 
     static func log(error: Error) {
-        print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
+        print("\n - - - - - - - - - - ERROR - - - - - - - - - - \n")
         defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
         print(error)
     }

@@ -6,23 +6,23 @@ A simple network request class with URL Session & Combine framework to get, post
 
 ## How to use NetworkRequest.swift
 
-Create NetworkRequest.swift class instance in your ViewControler.swift class. 
+Create NetworkManager.swift class instance in your ViewControler.swift class. 
 
 ```bash
-  let networkRequest = NetworkRequest()
+  let networkManager = NetworkManager()
   var subscriptions = Set<AnyCancellable>()
 ```
 
 Create your URL request and call request method with your URL request.
 ```bash
    let request = CountryRequest()
-   networkRequest.dataRequest(request)
+   networkManager.request(request)
       .sink { (completion) in
           switch completion {
               case .failure(let error):
                   print("Error: \(error.localizedDescription)")
               case .finished:
-                  print("Do your stuff here.")
+                  print("Finished")
               }
         } receiveValue: { (countries) in
            print("Number of countries - \(countries.count) countries")

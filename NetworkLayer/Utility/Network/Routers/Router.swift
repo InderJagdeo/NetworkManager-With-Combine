@@ -7,9 +7,6 @@
 
 import Foundation
 
-public typealias RequestHeaders = [String: String]
-public typealias RequestParameters = [String : Any?]
-
 public protocol Router {
 
     associatedtype Response: Codable

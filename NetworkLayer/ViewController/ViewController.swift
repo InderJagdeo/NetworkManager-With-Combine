@@ -10,8 +10,8 @@ import Combine
 
 class ViewController: UIViewController {
 
-    var subscriptions = Set<AnyCancellable>()
     var networkManager = NetworkManager()
+    var subscriptions = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()

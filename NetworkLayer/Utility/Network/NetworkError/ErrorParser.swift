@@ -16,7 +16,7 @@ struct ErrorParser: ErrorParserType {
 
     func parse(_ error: ErrorHandler) -> Error {
          switch error {
-         case .mapNetworkError(let statusCode):
+         case .mapRequestError(let statusCode):
              switch statusCode {
              case 400: return RequestError.invalidRequest(statusCode)
              case 401: return RequestError.unauthorized(statusCode)
@@ -25,7 +25,7 @@ struct ErrorParser: ErrorParserType {
              case 402, 405...599: return RequestError.serverError(statusCode)
              default: return RequestError.unknown(nil, ErrorMessage.unknowError.rawValue)
              }
-         case .handleNetworkError(let error):
+         case .handleRequestError(let error):
              switch error {
              case is Swift.DecodingError:
                  return RequestError.invalidResponse(error)
@@ -41,6 +41,6 @@ struct ErrorParser: ErrorParserType {
 }
 
 public enum ErrorHandler {
-    case mapNetworkError(_ statusCode: Int)
-    case handleNetworkError(_ error: Error)
+    case mapRequestError(_ statusCode: Int)
+    case handleRequestError(_ error: Error)
 }
