@@ -1,6 +1,7 @@
 # NetworkLayer
 
-![NetworkManager](https://user-images.githubusercontent.com/29178012/203470867-f3e8a263-a32d-4a9c-9ea6-1cb20036c4c4.svg)
+![NetworkManager](https://github.com/InderJagdeo/NetworkManager-With-Combine/assets/29178012/16dee0f1-c521-4ff4-8743-4db18c3a030a)
+
 
 A simple network manager class with URL Session & Combine framework to get, post, put, and delete data on the server in swift language.
 
