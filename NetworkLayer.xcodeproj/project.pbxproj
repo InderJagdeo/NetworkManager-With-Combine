@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70D88EA2AB420DE00FD50F3 /* PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D88E92AB420DE00FD50F3 /* PushNotification.swift */; };
+		C70D88EC2AB4211100FD50F3 /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D88EB2AB4211100FD50F3 /* Data+Ext.swift */; };
 		FA082E5B292DD3FA008BBC95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA082E5A292DD3FA008BBC95 /* AppDelegate.swift */; };
 		FA082E5D292DD3FA008BBC95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA082E5C292DD3FA008BBC95 /* SceneDelegate.swift */; };
 		FA082E5F292DD3FA008BBC95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA082E5E292DD3FA008BBC95 /* ViewController.swift */; };
@@ -55,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C70D88E92AB420DE00FD50F3 /* PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotification.swift; sourceTree = "<group>"; };
+		C70D88EB2AB4211100FD50F3 /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
+		C70D88ED2AB421D400FD50F3 /* NetworkLayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkLayer.entitlements; sourceTree = "<group>"; };
 		FA082E57292DD3FA008BBC95 /* NetworkLayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkLayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA082E5A292DD3FA008BBC95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA082E5C292DD3FA008BBC95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C70D88E82AB420BB00FD50F3 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				C70D88E92AB420DE00FD50F3 /* PushNotification.swift */,
+			);
+			path = Permissions;
+			sourceTree = "<group>";
+		};
 		FA082E4E292DD3FA008BBC95 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 		FA082E59292DD3FA008BBC95 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				C70D88ED2AB421D400FD50F3 /* NetworkLayer.entitlements */,
 				FA082E8A292DD407008BBC95 /* Application */,
 				FA082E8D292DD435008BBC95 /* Storyboard */,
 				FA082E8C292DD42A008BBC95 /* ViewController */,
@@ -203,6 +217,7 @@
 		FA082E8E292DD4A2008BBC95 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C70D88E82AB420BB00FD50F3 /* Permissions */,
 				FA082E8F292DD4A2008BBC95 /* Network */,
 				FA082EA1292DD4A2008BBC95 /* Extensions */,
 				FA082EA3292DD4A2008BBC95 /* NetworkMonitor */,
@@ -260,6 +275,7 @@
 			children = (
 				FA082EA2292DD4A2008BBC95 /* CustomStringConvertible+Codable.swift */,
 				FA082EC3292E3A95008BBC95 /* StatusCode+Helper.swift */,
+				C70D88EB2AB4211100FD50F3 /* Data+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -439,8 +455,10 @@
 				FA082EB9292DD51D008BBC95 /* Country.swift in Sources */,
 				FA082EB3292DD4A2008BBC95 /* NetworkMonitor.swift in Sources */,
 				FA082EA6292DD4A2008BBC95 /* NSMutableData+Append.swift in Sources */,
+				C70D88EA2AB420DE00FD50F3 /* PushNotification.swift in Sources */,
 				FA082EBF292E37CF008BBC95 /* EndPoint.swift in Sources */,
 				FA082EAA292DD4A2008BBC95 /* ErrorParser.swift in Sources */,
+				C70D88EC2AB4211100FD50F3 /* Data+Ext.swift in Sources */,
 				FA082EB2292DD4A2008BBC95 /* CustomStringConvertible+Codable.swift in Sources */,
 				FA082E5B292DD3FA008BBC95 /* AppDelegate.swift in Sources */,
 				FA082EC4292E3A95008BBC95 /* StatusCode+Helper.swift in Sources */,
@@ -555,7 +573,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -610,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -625,9 +643,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NetworkLayer/NetworkLayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M5M7Z3Y694;
+				DEVELOPMENT_TEAM = U366Y99R5Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NetworkLayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -640,7 +659,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inderjagdeo.NetworkLayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdna.ingkycquiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -653,9 +672,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NetworkLayer/NetworkLayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M5M7Z3Y694;
+				DEVELOPMENT_TEAM = U366Y99R5Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NetworkLayer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -668,7 +688,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.inderjagdeo.NetworkLayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdna.ingkycquiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
